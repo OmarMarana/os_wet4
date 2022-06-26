@@ -133,7 +133,7 @@ void* srealloc(void* oldp, size_t size){
     }
     //free old if success
     sfree(oldp);
-    memcpy(new_block,oldp,size);
+    memmove(new_block,oldp,size);
     return new_block;
 }
 
